@@ -26,7 +26,7 @@ def instructions_reader():
     return instructions_prompt
 
 
-
+#EXCLUDE HEADERS
 def structed_paragraphs(document: Document):
     paragraphs = []
     for para in document.paragraphs:
@@ -40,11 +40,11 @@ def structed_paragraphs(document: Document):
     return paragraphs
 
 
+#PROMPTING
 async def prompting(client: AsyncOpenAI, paragraphs: list, instructions_prompt: str):
     generated_prompts = []
     ind = 0
 
-    #PROMPTING
 
     tasks = []
     for i in range(len(paragraphs)):
@@ -67,6 +67,8 @@ async def prompting(client: AsyncOpenAI, paragraphs: list, instructions_prompt: 
     return generated_prompts
 
 
+
+#RUN FROM THIS FILE
 if __name__ == "__main__":
     asyncio.run(prompting(
         client=client_create(),
