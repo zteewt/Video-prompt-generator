@@ -4,6 +4,7 @@
 
 ```bash
 git clone https://github.com/zteewt/Video-prompt-generator.git
+cd ./video_prompter
 ```
 
 ## 2) Создание виртуального окружения (Linux)
@@ -26,7 +27,7 @@ pip install -r requirements.txt
 
 
 
-Таблица prompt_tables.csv состоит из полей `id`- нумерация строк, `paragraph` - исходный абзац, `response` - сгенерированный промпт под этот абзац.
+Таблица `prompt_tables.csv` состоит из полей `id`- нумерация строк, `paragraph` - исходный абзац, `response` - сгенерированный промпт под этот абзац.
 
 
 
